@@ -513,10 +513,14 @@ body.nav-active { overflow: hidden; }
 \*-----------------------------------*/
 
 .topic-card {
+  display: flex; /* Menggunakan flexbox untuk mengatur tata letak */
+    flex-direction: column; /* Menjadikan flexbox berorientasi kolom */
   padding: 24px;
   border-radius: var(--radius-8);
 }
-
+.card-title {
+    margin-bottom: 10px; /* Menambahkan margin bawah untuk memberi jarak antara judul dan paragraf */
+}
 .topic-card .card-content { margin-block-end: 15px; }
 
 .topic-card .card-text {
@@ -605,6 +609,10 @@ body.nav-active { overflow: hidden; }
   flex-wrap: wrap;
   gap: 30px;
 }
+.feature-list li {
+  width: calc(25% - 10px); /* 4 item per baris, dikurangi margin */
+  margin-bottom: 20px; /* Jarak antara baris */
+}
 
 .feature-card {
   padding: 20px;
@@ -618,7 +626,7 @@ body.nav-active { overflow: hidden; }
 }
 
 .grid-list-skill li {
-  flex-basis: calc(33.33% - 10px); /* Menentukan lebar setiap item */
+  flex-basis: calc(25% - 10px); /* Menentukan lebar setiap item */
   margin-bottom: 20px; /* Ruang bawah antara setiap item */
 }
 .btn-text-skill {
@@ -1060,7 +1068,20 @@ body.nav-active { overflow: hidden; }
     max-width: 540px;
     width: 100%;
     margin-inline: auto;
+    
   }
+  .about-cardss {
+    padding: 25px;
+    border-radius: var(--radius-16);
+    width: 100%;
+    width: 100%; /* Pastikan konten mengisi seluruh lebar container */
+    max-width: 600px; /* Atur lebar maksimum konten */
+    padding: 20px; /* Atur padding sesuai kebutuhan */
+  }
+  .about-card {
+    width: 100%; /* Pastikan kartu memenuhi lebar layar */
+    max-width: 100%; /* Atur lebar maksimum kartu sebagai 100% dari lebar layar */
+}
 
   .headline-3 { --fontSize-2: 2.4rem; }
 
